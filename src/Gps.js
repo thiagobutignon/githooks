@@ -4,7 +4,8 @@ export default function Gps() {
   const [location, setLocation] = useState({});
 
   useEffect(() => {
-    navigator.geolocation.watchPosition(handlePostionReceiver);
+    const watchId = navigator.geolocation.watchPosition(handlePostionReceiver);
+    return () => navigator.geolocation.clearWatch(watchId);
   }, []);
 
   function handlePostionReceiver({ coords }) {
