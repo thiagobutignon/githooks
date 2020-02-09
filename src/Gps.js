@@ -19,6 +19,7 @@ export default function Gps() {
         Latitude: {location.latitude} <br />
         Longitude: {location.longitude}
       </p>
+      <h2>Cuidado, você está sendo vigiado!</h2>
     </>
   );
 }

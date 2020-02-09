@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import Gps from "./Gps";
 export default function App() {
   const [repositories, setRepositories] = useState([]);
 
@@ -39,6 +39,7 @@ export default function App() {
           </li>
         ))}
       </ul>
+      <Gps />
     </>
   );
 }
